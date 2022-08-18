@@ -9,9 +9,9 @@ const port = process.env.PORT || 1234;
 const app = express();
 
 app.set("view engine", "ejs");
-app.set("views", path.resolve(__dirname, "templates"));
+app.set("views", path.resolve(__dirname, "VKauth/templates"));
 
-app.use(express.static(path.resolve(__dirname, "static")));
+app.use(express.static(path.resolve(__dirname, "VKauth/static")));
 
 // подключение роутинга
 app.use("/vk_oauth", vk_oauth_router);
