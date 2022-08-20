@@ -39,4 +39,4 @@ async function get_friends(friends_list_id) {
   });
 }
 
-export { get_friends };
+export { get_friends , get_friend};

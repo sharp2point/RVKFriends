@@ -9,13 +9,10 @@
   </head>
   <body>
     <div class="counter-block">
-      <p>Loaded: <span class="r-count"><%= users.length %></span></p>
-      <p>Goal: <span class="f-count"><%= user_count %></span></p>
+      <p>Goal: <span class="f-count"><%= friends.count %></span></p>
     </div>
     <div class="all-friends">
-      <% users.forEach(function(user){ %>
-        <%- include('user_card', {user:user}) %>       
-      <% }); %>
+      
     </div>
     <script src="./scripts/friends.js"></script>
   </body>
