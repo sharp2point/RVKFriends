@@ -13,8 +13,9 @@ const port = process.env.PORT || 1234;
 const app = express();
 
 app.set("view engine", "ejs");
-app.set("views", path.resolve(__dirname, "VKauth/templates"));
+app.set("views", path.resolve(__dirname, "./templates"));
 app.use(express.static(path.resolve(__dirname, "VKauth/static")));
+app.use(express.static(path.resolve(__dirname, "./static")));
 
 // ------------- YOU CODE ----------------------------
 // подключение роутинга oauth

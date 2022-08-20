@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends page</title>
+    <link href="./styles/friends.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="counter-block">
+      <p>Loaded: <span class="r-count"><%= users.length %></span></p>
+      <p>Goal: <span class="f-count"><%= user_count %></span></p>
+    </div>
+    <div class="all-friends">
+      <% users.forEach(function(user){ %>
+        <%- include('user_card', {user:user}) %>       
+      <% }); %>
+    </div>
+    <script src="./scripts/friends.js"></script>
+  </body>
+</html>
