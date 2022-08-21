@@ -27,6 +27,7 @@ router.get("/", async (req, res) => {
 router.get("/friends", async (req, res) => {
   await get_friend(items_friends[offset]).then((user) => res.send({ user: user }));
   offset++;
+  if(offset>=items_friends.length) offset=0;
 });
 
 export { router };
