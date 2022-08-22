@@ -9,10 +9,12 @@
   </head>
   <body>
     <div class="block-menu">
-      <%- include('menu_sort')  %> 
+      <vkf-hmenu
+        items="name photo friend like message"
+        icons="accessibility camera woman heart chatbubble-outline"
+      ></vkf-hmenu>
     </div>
-    
-    
+
     <div class="all-friends"></div>
 
     <div class="counter-block">
@@ -26,6 +28,10 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script src="./scripts/friends.js"></script>
+    <script
+      type="module"
+      src="./scripts/components/vkf_hmenu/vkf_hmenu.js"
+    ></script>
+    <script type="module" src="./scripts/friends.js"></script>
   </body>
 </html>

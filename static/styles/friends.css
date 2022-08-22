@@ -40,14 +40,14 @@ body{
     flex-direction: row;
     width: 350px;
 }
-.menu-sort ul li{
+.menu-sort ul vkf-item-menu{
     position: relative;
     list-style:none;
     width: 70px;
     height: 70px;
     z-index: 1;
 }
-.menu-sort ul li a{
+.menu-sort ul vkf-item-menu a{
     position: relative;
     display: flex;
     justify-content: center;
@@ -57,7 +57,7 @@ body{
     text-align: center;
     font-weight: 500;
 }
-.menu-sort ul li a .icon{
+.menu-sort ul vkf-item-menu a .icon{
     position: relative;
     display: block;
     line-height: 75px;
@@ -66,10 +66,10 @@ body{
     transition: 0.5s;
     color: var(--clr);
 }
-.menu-sort ul li.active a .icon{
+.menu-sort ul vkf-item-menu.active a .icon{
     transform: translateY(-35px);
 }
-.menu-sort ul li a .text{
+.menu-sort ul vkf-item-menu a .text{
     position: absolute;
     color: var(--clr);
     font-weight: 400;
@@ -79,7 +79,7 @@ body{
     opacity: 0;
     transform: translateY(20px);
 }
-.menu-sort ul li.active a .text{
+.menu-sort ul vkf-item-menu.active a .text{
     opacity: 1;
     transform: translateY(10px);
 }
@@ -115,19 +115,19 @@ body{
     border-top-left-radius: 20px;
     box-shadow: 0px -10px 0 0 var(--clr);
 }
-.menu-sort ul li:nth-child(1).active ~ .indicator{
+.menu-sort ul vkf-item-menu:nth-child(1).active ~ .indicator{
     transform: translateX(calc(70px*0));
 }
-.menu-sort ul li:nth-child(2).active ~ .indicator{
+.menu-sort ul vkf-item-menu:nth-child(2).active ~ .indicator{
     transform: translateX(calc(70px*1));
 }
-.menu-sort ul li:nth-child(3).active ~ .indicator{
+.menu-sort ul vkf-item-menu:nth-child(3).active ~ .indicator{
     transform: translateX(calc(70px*2));
 }
-.menu-sort ul li:nth-child(4).active ~ .indicator{
+.menu-sort ul vkf-item-menu:nth-child(4).active ~ .indicator{
     transform: translateX(calc(70px*3));
 }
-.menu-sort ul li:nth-child(5).active ~ .indicator{
+.menu-sort ul vkf-item-menu:nth-child(5).active ~ .indicator{
     transform: translateX(calc(70px*4));
 }
 
