@@ -1,4 +1,5 @@
 // front part
+import UserCard from "./components/vkf_user_card/vkf_user_card.js";
 
 let headList = document.querySelectorAll(".u-name");
 let fcount = document.querySelector(".f-count");
@@ -18,15 +19,12 @@ sort_menu_items.forEach(item=>{
 let count_friend = parseInt(fcount.textContent) - 1;
 
 function append_friend(user) {
+  const counters = JSON.stringify(user.counters).replaceAll('\"','\'')
   let user_card = `
-        <div class="card">
-            <h4 class="u-name">${user.first_name} ${user.last_name}</h4>
-            <img src="${user.photo_max_orig}" />
-            <ul>
-                <li>Photos: ${user.counters.photos}</li>
-                <li>Friends: ${user.counters.friends}</li>
-            </ul>
-        </div>`;
+        <vkf-user-card name="${user.first_name} ${user.last_name}"
+                       avatar="${user.photo_max_orig}"
+                       counters=${counters}
+        </vkf-user-card>`;
   friends_place.innerHTML += user_card;
 }
 const timer_id = setInterval(() => {
