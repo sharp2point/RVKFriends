@@ -3,31 +3,40 @@ export default {
         return `${this.html(props)}${this.css(props)}`;
     },
     html(p){ return `<div class="descript">
-            <h4>${p.name}</h4>
             <img src="${p.avatar}"/>
+             <h4>${p.name}</h4>           
             <div class="counters">
                 <span class="photo">P: ${p.photos}</span>
                 <span class="friend">F: ${p.friends}</span>
             </div>
         </div>`;},
     css(p){ return `<style>
-            h4{
-                font-size: 0.8em;
-            }
             .descript{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 item-align: center;
+                font-size: 0.8em;
                 padding: 0.2em;
+                border: 5px solid white;
+            }
+            .descript h4{
+                position: relative;
+                top:-50px;
+                z-index:10;
+                color: #FFFFFF;
+                text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
             }
             .descript img{
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-
+                position: relative;
+                margin: 0 auto;
+                width: 90px;
+                height: 90px;
+                object-fit: cover;
             }
             .descript .counters{
+                position: relative;
+                top: -50px;
                 height: 60px;
                 width: 90%;
                 display: flex;
