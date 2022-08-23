@@ -19,26 +19,34 @@ body{
     background: var(--clr);
 }
 .block-menu{
+    
     width: 100vw;
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.block-menu .sort-menu{
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 0.4em;
+    background: #AFCCCC;
+}
 
 /*-----------------------------------*/
 .all-friends{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: left;
     align-items: center;
 }
 .all-friends vkf-user-card{
     border: 1px solid white;
-    background: whitesmoke;
-    width: 100vh;
-    height: 60px;
+    background: rgb(254, 255, 255);
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
     margin: 5px;
-    border-radius: 1em;
 }

@@ -29,7 +29,7 @@ class HMenu extends HTMLElement {
 
     this.innerHTML+=`
         <style>
-        .menu-sort{
+        .hmenu{
             position: relative;
             width: 400px;
             height: 70px;
@@ -39,12 +39,12 @@ class HMenu extends HTMLElement {
             align-items: center;
             border-radius: 10px;
         }
-        .menu-sort .items{
+        .hmenu .items{
             display: flex;
             flex-direction: row;
             width: 350px;
         }
-        .menu-sort .items vkf-item-menu{
+        .hmenu .items vkf-item-menu{
             position: relative;
             list-style:none;
             width: 70px;
@@ -83,19 +83,19 @@ class HMenu extends HTMLElement {
             border-top-left-radius: 20px;
             box-shadow: 0px -10px 0 0 var(--clr);
         }
-        .menu-sort .items vkf-item-menu:nth-child(1).active ~ .indicator{
+        .hmenu .items vkf-item-menu:nth-child(1).active ~ .indicator{
             transform: translateX(calc(70px*0));
         }
-        .menu-sort .items vkf-item-menu:nth-child(2).active ~ .indicator{
+        .hmenu .items vkf-item-menu:nth-child(2).active ~ .indicator{
             transform: translateX(calc(70px*1));
         }
-        .menu-sort .items vkf-item-menu:nth-child(3).active ~ .indicator{
+        .hmenu .items vkf-item-menu:nth-child(3).active ~ .indicator{
             transform: translateX(calc(70px*2));
         }
-        .menu-sort .items vkf-item-menu:nth-child(4).active ~ .indicator{
+        .hmenu .items vkf-item-menu:nth-child(4).active ~ .indicator{
             transform: translateX(calc(70px*3));
         }
-        .menu-sort .items vkf-item-menu:nth-child(5).active ~ .indicator{
+        .hmenu .items vkf-item-menu:nth-child(5).active ~ .indicator{
             transform: translateX(calc(70px*4));
         }
         </style>

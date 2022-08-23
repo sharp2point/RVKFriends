@@ -5,21 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Friends page</title>
-    <link href="./styles/friends.css" rel="stylesheet" />
+    <link href="./styles/friends.css" rel="stylesheet" />    
+
+    <script
+      type="module"
+      src="./scripts/components/vkf_sort_menu/vkf_sort_menu.js"
+    ></script>
+
+    <script
+      type="module"
+      src="./scripts/components/vkf_hmenu/vkf_hmenu.js"
+    ></script>
   </head>
   <body>
     <div class="block-menu">
-      <vkf-hmenu class="menu-sort"
+      <vkf-sort-menu class="sort-menu"> </vkf-sort-menu>
+    </div>
+<!-- 
+      <vkf-hmenu
+        class="hmenu"
         items="name photo friend like message"
         icons="accessibility camera woman heart chatbubble-outline"
       ></vkf-hmenu>
-    </div>
+     -->
 
     <div class="all-friends"></div>
 
     <div class="counter-block">
       <p>Goal: <span class="f-count"><%= friends.count %></span></p>
     </div>
+
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -28,10 +44,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-    <script
-      type="module"
-      src="./scripts/components/vkf_hmenu/vkf_hmenu.js"
-    ></script>
+
     <script type="module" src="./scripts/friends.js"></script>
   </body>
 </html>

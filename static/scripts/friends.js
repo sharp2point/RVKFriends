@@ -23,8 +23,7 @@ function append_friend(user) {
   let user_card = `
         <vkf-user-card name="${user.first_name} ${user.last_name}"
                        avatar="${user.photo_max_orig}"
-                       counters=${counters}
-        </vkf-user-card>`;
+                       counters=${counters}>`;
   friends_place.innerHTML += user_card;
 }
 const timer_id = setInterval(() => {
