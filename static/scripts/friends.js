@@ -3,25 +3,19 @@ import UserCard from "./components/vkf_user_card/vkf_user_card.js";
 
 let headList = document.querySelectorAll(".u-name");
 let fcount = document.querySelector(".f-count");
+let lcount = document.querySelector(".l-count");
 let friends_place = document.querySelector(".all-friends");
-const sort_menu_items = document.querySelectorAll(".list");
-
-function activeSortMenuItem() {
-  sort_menu_items.forEach((item) => {
-    item.classList.remove("active");
-    this.classList.add("active");
-  });
-}
-sort_menu_items.forEach(item=>{
-    item.addEventListener("click", activeSortMenuItem)
-})
-
 let count_friend = parseInt(fcount.textContent) - 1;
 
+let load_count = 1; // счетчик процесса загрузки данных друзей
+
+let friends_list = []; // список данных всех друзей
+let id_list = []; // список id всех друзей
+
 function append_friend(user) {
-  const counters = JSON.stringify(user.counters).replaceAll('\"','\'')
+  const counters = JSON.stringify(user.counters).replaceAll('"', "'");
   let user_card = `
-        <vkf-user-card name="${user.first_name} ${user.last_name}"
+        <vkf-user-card id="${user.id}" name="${user.first_name} ${user.last_name}"
                        avatar="${user.photo_max_orig}"
                        counters=${counters}>`;
   friends_place.innerHTML += user_card;
@@ -34,7 +28,19 @@ const timer_id = setInterval(() => {
   fetch("http://localhost:1234/vk_friends/friends")
     .then((res) => res.json())
     .then((user) => {
-      append_friend(user.user);
+      friends_list.push(user.user);
+      if (friends_list.length === parseInt(fcount.textContent)) {     
+        // id_list = Array.prototype.map.call(friends_list,(x)=>x.id); 
+        // console.log(id_list);  
+
+        friends_list.forEach((item) => {
+          append_friend(item);
+        });
+        
+      } else {
+        load_count++;
+        lcount.innerHTML = `${load_count}`;
+      }
     })
     .catch((err) => console.log(err));
 }, 10);

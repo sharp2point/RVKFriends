@@ -19,21 +19,22 @@
   </head>
   <body>
     <div class="block-menu">
+      <a href="/">HOME</a>
+      <div class="counter-block">
+        <div class="count-friends">
+          <span>All:</span><span class="f-count"><%= count %></span>
+        </div>
+        <div class="count-loaded-friends">
+          <span>Loaded:</span><span class="l-count">0</span>
+        </div>
+      </div>
+      
       <vkf-sort-menu class="sort-menu"> </vkf-sort-menu>
     </div>
-<!-- 
-      <vkf-hmenu
-        class="hmenu"
-        items="name photo friend like message"
-        icons="accessibility camera woman heart chatbubble-outline"
-      ></vkf-hmenu>
-     -->
 
     <div class="all-friends"></div>
 
-    <div class="counter-block">
-      <p>Goal: <span class="f-count"><%= friends.count %></span></p>
-    </div>
+    
 
 
     <script
