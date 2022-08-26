@@ -61,6 +61,7 @@ export default {
             .descript .counters span.friend{
                 background: #CCCCAF;
             }
+            
         </style>`;}
 
 }

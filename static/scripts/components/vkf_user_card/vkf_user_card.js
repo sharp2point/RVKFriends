@@ -17,12 +17,12 @@ class UserCard extends HTMLElement {
     });
     this.setAttribute("photo", counters.photos);
     this.setAttribute("friend", counters.friends);
-    this.addEventListener("click", async (e) => {
-      let res = await fetch("http://localhost:1234/vk_friends/friends/" + id)
-        .then((res) => res.json())
-        .then((json) => json.items)
-        .catch((err) => console.log(err));
-    });
+    // this.addEventListener("click", async (e) => {
+    //   let res = await fetch("http://localhost:1234/vk_friends/friends/" + id)
+    //     .then((res) => res.json())
+    //     .then((json) => json.items)
+    //     .catch((err) => console.log(err));
+    // });
   }
 }
 if (!customElements.get("vkf-user-card")) {

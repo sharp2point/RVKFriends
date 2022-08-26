@@ -70,3 +70,8 @@ body{
     line-height:1em;
     text-align: center;
 }
+
+.cross{
+    border:5px solid blue;
+    box-shadow: 0 0 5px red;
+}
